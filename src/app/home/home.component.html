@@ -1,0 +1,16 @@
+<div fxLayout="row" fxLayoutAlign="start stretch" style="padding: 30px;">
+    <div class="grandparent">
+      <div class="parent" [ngClass]="selectedClass">
+        <div class="item" *ngFor="let item of items; let i=index" [ngClass]="{'selected': selectedIndex === i}" (click)="selectIndex(i)" matRipple fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="10px">
+          <mat-icon fxFlexAlign="center">{{ item.icon }}</mat-icon>
+          <div fxFlex fxLayout="row" fxLayoutAlign="center center">
+            <div fxFlex class="mat-h3 text">{{ item.label }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content shadow" fxFlex>
+      text here
+    </div>
+  </div>
+
